@@ -2,10 +2,7 @@ name: wxread
 
 on:
   schedule:
-    # cron表达式使用UTC时间
-    # 目标时间：北京时间 (UTC+8) 每天早上 6:30
-    # 对应UTC时间：前一天的 22:30
-    - cron: '30 22 * * *'
+    - cron: '0 17 * * *'  # 每天北京时间凌晨1点执行（UTC时间17点）
   workflow_dispatch:  # 手动触发
 
 jobs:
