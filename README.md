@@ -1,3 +1,5 @@
+# 刷时间不加时长，是因为最近微信读书又缩紧限制了，需要更新或重新fork配置 ！！！
+
 ## 项目介绍 📚
 
 这个脚本主要是为了在微信读书的阅读**挑战赛中刷时长**和**保持天数**。由于本人偶尔看书时未能及时签到，导致入场费打了水漂。网上找了一些，发现高赞的自动阅读需要挂阅读器模拟或者用ADB模拟，实现一点也不优雅。因此，我决定编写一个自动化脚本。通过对官网接口的抓包和JS逆向分析实现。
@@ -41,7 +43,7 @@
 | key                        | Value                               | 说明                                                         | 属性      |
 | ------------------------- | ---------------------------------- | ------------------------------------------------------------ | --------- |
 | `WXREAD_CURL_BASH`         | `read` 接口 `curl_bash`数据 | **必填**，必须提供有效指令                                   | secrets   |
-| `READ_NUM`                 | 阅读次数（每次 30 秒）              | **可选**，阅读时长，默认 60 分钟                           | variables |
+| `READ_NUM`                 | 阅读次数（每次 30 秒）              | **可选**，阅读时长，默认 20 分钟                           | variables |
 | `PUSH_METHOD`              | `pushplus`/`wxpusher`/`telegram`    | **可选**，推送方式，3选1，默认不推送                                       |    secrets     |
 | `PUSHPLUS_TOKEN`           | PushPlus 的 token                   | 当 `PUSH_METHOD=pushplus` 时必填，[获取地址](https://www.pushplus.plus/uc.html) | secrets   |
 | `WXPUSHER_SPT`             | WxPusher 的token                    | 当 `PUSH_METHOD=wxpusher` 时必填，[获取地址](https://wxpusher.zjiecode.com/docs/#/?id=获取spt) | secrets   |
